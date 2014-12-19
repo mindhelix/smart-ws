@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  h1= title
+  p Joins the room team 
+    i 'Django'
+  
+  p Toggle 
+    button.toggle off
+  
+  p.display Toggle status is 
+    span off
+    
+    
+  hr
+    
+  h2 Events
+  
+  h3 entrance
+  
+  p response:
+    i { message: 'You just joined the party' }
+  
+  h3 join_room
+  
+  p params: 
+    i { room: 'room-name' }
+    br
+    br
+    i e.g. { room: 'Django' }
+    
+  h3 toggle
+  
+  p params: 
+    i { room: 'room-name', status: 'status-value' }
+    br
+    br
+    i e.g. { room: 'Django', status: 'on' }
+    
+  h3 disconnect
+  
+  p Default event.

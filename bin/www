@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+var debug = require('debug')('socket-express');
+var http = require('http');
+var app = require('../app');
+var smartio = require('../socketio/smartio');
+
+app.set('port', process.env.PORT || 3000);
+
+var server = http.createServer(app).listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});
+
+
+/**
+ * Socket.io
+ */
+var io = require('socket.io')(server);
+
+smartio.init(io);
+
+
+io.on('connection', function(socket) {
+  smartio.connect(socket);
+});
