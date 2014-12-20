@@ -3,7 +3,7 @@
  */
 
 
-var socket = io.connect('http://localhost');
+var socket = io.connect('http://smartws.getmyrico.com');
 socket.on('entrance', function (data) {
   console.log(data);
 
