@@ -1,7 +1,7 @@
 /**
  * Socket io events
  */
-var debug = require('debug')('socket-express');
+var debug = require('debug')('smart-ws');
 
 var io = null;
 

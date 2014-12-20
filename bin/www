@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var debug = require('debug')('socket-express');
+var debug = require('debug')('smart-ws');
 var http = require('http');
 var app = require('../app');
 var smartio = require('../socketio/smartio');
